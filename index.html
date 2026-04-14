@@ -70,12 +70,15 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    height: 48px;
+    overflow: hidden;
   }
 
   .nav-logo-img {
-    height: 48px;
+    height: 138px;
     width: auto;
     display: block;
+    margin: -45px 0;
   }
 
   .nav-links a {
@@ -819,6 +822,17 @@
     border-radius: 50%;
   }
 
+  .member-details li.details-heading {
+    padding-left: 0;
+    margin-top: 6px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+  }
+  .member-details li.details-heading::before { display: none; }
+
   .team-trust {
     margin-top: 32px;
     padding: 20px 32px;
@@ -1014,6 +1028,14 @@
   .footer-tagline { font-size: 0.85rem; font-weight: 400; line-height: 1.65; color: rgba(255,255,255,0.45); margin-bottom: 20px; max-width: 280px; }
   .footer-contact { font-size: 0.72rem; font-weight: 500; color: rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 0.03em; transition: color 80ms; }
   .footer-contact:hover { color: var(--white); }
+  .footer-addresses { margin-top: 22px; display: flex; flex-direction: column; gap: 18px; max-width: 320px; }
+  .footer-address-block { display: flex; gap: 14px; align-items: flex-start; }
+  .footer-icon { width: 18px; height: 18px; flex-shrink: 0; color: rgba(255,255,255,0.75); margin-top: 2px; stroke-width: 1.75; }
+  .footer-address-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .footer-address-label { font-size: 0.82rem; font-weight: 500; color: var(--white); line-height: 1.3; }
+  .footer-address { font-size: 0.75rem; font-weight: 400; line-height: 1.55; color: rgba(255,255,255,0.55); margin: 0; }
+  .footer-address a { color: inherit; text-decoration: none; transition: color 80ms; }
+  .footer-address a:hover { color: var(--white); }
 
   .footer-col-title { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
   .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -1091,7 +1113,8 @@
     .invest-headline { font-size: 1.4rem; }
     .invest-gdp { font-size: 2.2rem; }
     .team-grid { grid-template-columns: 1fr; }
-    .nav-logo-img { height: 36px; }
+    .nav-logo { height: 36px; }
+    .nav-logo-img { height: 103.5px; margin: -33.75px 0; }
     .logo-placeholder { height: 44px; max-width: 150px; }
     .logo-set { gap: 40px; }
   }
@@ -1128,7 +1151,7 @@
         <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
         <li><a href="#team" data-i18n="nav.team">Team</a></li>
         <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-        <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Book a Call</a></li>
+        <li><a href="https://calendly.com/us-expansion-advisory/30min" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.cta">Book a Call</a></li>
       </ul>
     </div>
   </div>
@@ -1143,12 +1166,12 @@
       <div class="hero-overline" data-i18n="hero.overline">Global Market Entry Specialists</div>
       <h1 class="hero-headline">
         <span data-i18n="hero.headline" data-i18n-html="true">Expand Your Business<br>into the U.S. from</span><br>
-        <span class="word-container" id="wordSlot">Expansion</span>
+        <span class="word-container" id="wordSlot">Research</span>
       </h1>
       <p class="hero-sub" data-i18n="hero.sub">We are the end-to-end partner that international companies trust to navigate U.S. market entry — from legal setup and immigration to sales, digital growth, and scaling operations.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Start Your US Expansion &#8594;</a>
-        <a href="#contact" class="btn-secondary" data-i18n="hero.cta2">Book a Free Consultation</a>
+        <a href="https://calendly.com/us-expansion-advisory/30min" target="_blank" rel="noopener" class="btn-primary" data-i18n="hero.cta1">Start Your US Expansion &#8594;</a>
+        <a href="https://calendly.com/us-expansion-advisory/30min" target="_blank" rel="noopener" class="btn-secondary" data-i18n="hero.cta2">Book a Free Consultation</a>
       </div>
     </div>
   </div>
@@ -1316,7 +1339,7 @@
     <div class="section-label" data-i18n="invest.eyebrow">Why Invest in the USA</div>
     <h2 class="section-title" data-i18n="invest.headline" data-i18n-html="true">The World's Largest <em>Consumer Market</em></h2>
     <div class="invest-content reveal">
-      <p class="invest-text" data-i18n="invest.text">The United States offers unparalleled opportunity for international companies. Combining top talent, unbeatable market access, and a culture of innovation.</p>
+      <p class="invest-text" data-i18n="invest.text">The United States offers unparalleled opportunities for international companies. Combining top talent, unbeatable market access, and a culture of innovation.</p>
       <div class="invest-stat">
         <div class="invest-gdp">$29T</div>
         <div class="invest-gdp-label" data-i18n="invest.gdp_label">U.S. GDP (2024)</div>
@@ -1410,7 +1433,7 @@
       <div class="why-item">
         <div class="why-number">IV.</div>
         <h3 class="why-title" data-i18n="why.w4.title">Cross-Industry Experience</h3>
-        <p class="why-text" data-i18n="why.w4.text">Deep expertise across SaaS, AI, fintech, e-commerce, deep tech, and consumer brands.</p>
+        <p class="why-text" data-i18n="why.w4.text">Deep expertise across agriculture, textiles and apparel, furniture and home goods, seafood and aquaculture, processed foods, manufacturing, industrial components, packaging, and consumer goods supply chains.</p>
       </div>
     </div>
   </div>
@@ -1424,20 +1447,18 @@
     <p class="section-sub" data-i18n="team.sub">A multidisciplinary team of legal, investment, and growth experts helping global companies succeed in the United States.</p>
     <div class="team-grid reveal">
       <div class="team-member">
-        <img class="member-avatar member-avatar-img" src="assets/headshot-trinh.png" alt="Trinh Pham">
+        <img class="member-avatar member-avatar-img" src="assets/headshot-trinh.png" alt="Tiffany Trinh Pham">
         <div class="member-info">
-          <div class="member-name">Trinh Pham</div>
-          <div class="member-role" data-i18n="team.m1.role">Expansion Director</div>
+          <div class="member-name">Tiffany Trinh Pham</div>
+          <div class="member-role" data-i18n="team.m1.role">Legal Director, International Business Law</div>
           <button class="member-detail-btn" onclick="toggleMember(this)">View Experience</button>
           <div class="member-details">
             <ul data-i18n="team.m1.details" data-i18n-html="true">
-              <li>10+ years advising on U.S. regulatory compliance across multiple industries</li>
-              <li>Former compliance officer at a Fortune 500 financial services firm</li>
-              <li>Expert in SEC, FDA, and FTC regulatory frameworks</li>
-              <li>Helped 40+ international companies achieve U.S. compliance certification</li>
-              <li>Specializes in fintech, health tech, and consumer goods compliance</li>
-              <li>Bilingual in English and Vietnamese</li>
-              <li>J.D. from Georgetown University Law Center</li>
+              <li>20+ years of experience in international business law</li>
+              <li>Focus on cross-border corporate structuring and international business operations</li>
+              <li class="details-heading">Education</li>
+              <li>MSc in Law, Economics &amp; Management, Foreign Trade University (Vietnam) and University of Nantes (France)</li>
+              <li>PhD candidate, Capitol Technology University (USA)</li>
             </ul>
           </div>
         </div>
@@ -1446,38 +1467,40 @@
         <img class="member-avatar member-avatar-img" src="assets/headshot-katelyne.png" alt="Katelyne Nguyen">
         <div class="member-info">
           <div class="member-name">Katelyne Nguyen</div>
-          <div class="member-role" data-i18n="team.m2.role">Investment &amp; Real Estate Director</div>
+          <div class="member-role" data-i18n="team.m2.role">Director, Real Estate &amp; Investments</div>
           <button class="member-detail-btn" onclick="toggleMember(this)">View Experience</button>
           <div class="member-details">
             <ul data-i18n="team.m2.details" data-i18n-html="true">
-              <li>Local resident for over 30 years</li>
-              <li>Over 15 years experience buying and selling properties in California</li>
-              <li>BA - University of California</li>
-              <li>Specializing in residential, condos, new construction, first-time home buyers and sellers, distressed properties, investors, and commercial sales</li>
-              <li>Awarded Top Listing Agent at Zillow</li>
-              <li>California Principal Real Estate Broker</li>
-              <li>Extensive customer service and sales experience</li>
-              <li>Volunteer for Garden Grove School District and Women's Society</li>
-              <li>Interior Design: Home furnishing, Kitchen and Office</li>
+              <li>Over 30 years as a California resident</li>
+              <li>15+ years of experience in California real estate transactions</li>
+              <li>Licensed California Principal Real Estate Broker</li>
+              <li>Expertise in residential, condos, new construction, first-time buyers and sellers, distressed properties, investors, and commercial sales</li>
+              <li>Background in interior design, including home furnishing, kitchen, and office spaces</li>
+              <li>Awarded Top Listing Agent on Zillow</li>
+              <li>Volunteer work with Garden Grove School District and Women&rsquo;s Society</li>
+              <li class="details-heading">Education</li>
+              <li>BA, University of California</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="team-member">
-        <img class="member-avatar member-avatar-img" src="assets/headshot-huong.png" alt="Huong Tran">
+        <a href="https://www.linkedin.com/in/jessiehuongtran/" target="_blank" rel="noopener">
+          <img class="member-avatar member-avatar-img" src="assets/headshot-huong.png" alt="Jessie Tran">
+        </a>
         <div class="member-info">
-          <div class="member-name">Huong Tran</div>
-          <div class="member-role" data-i18n="team.m3.role">Technology &amp; Digital Growth Consultant</div>
+          <div class="member-name">Jessie Tran</div>
+          <div class="member-role" data-i18n="team.m3.role">Consultant, Go-to-Market &amp; Digital Transformation</div>
           <button class="member-detail-btn" onclick="toggleMember(this)">View Experience</button>
           <div class="member-details">
             <ul data-i18n="team.m3.details" data-i18n-html="true">
-              <li>M.S. Entrepreneurship &amp; Innovation @ USC Marshall School of Business</li>
-              <li>10+ years of experience as Project Manager, Product, and Talent Development for Startups &amp; Fortune 500 companies</li>
-              <li>70-hr ACSTH Certified Coach @ International Coaching Federation</li>
-              <li>Certified Product Manager @ The Product School</li>
-              <li>USC Student Empowerment Award 2024</li>
-              <li>MSEI Scholarships recipient</li>
-              <li>2nd Place Venture Capital Investment Competition (VCIC) 2024</li>
+              <li>10+ years of experience in product, project management, and talent development across startups and Fortune 500 companies</li>
+              <li>Expertise in go-to-market strategy, execution, and cross-functional delivery</li>
+              <li>Certified Coach (70-hour ACSTH), International Coaching Federation</li>
+              <li>Certified Product Manager, The Product School</li>
+              <li class="details-heading">Education</li>
+              <li>MS in Entrepreneurship &amp; Innovation, USC Marshall School of Business</li>
+              <li>BS in International Business, Foreign Trade University</li>
             </ul>
           </div>
         </div>
@@ -1516,24 +1539,20 @@
 <section class="faq" id="faq">
   <div class="container">
     <div class="section-label" data-i18n="faq.label">Common Questions</div>
-    <h2 class="section-title" style="text-align:center;" data-i18n="faq.title" data-i18n-html="true">Frequently Asked <em>Questions</em></h2>
-    <p class="section-sub" style="text-align:center;" data-i18n="faq.sub">Everything you need to know about expanding your business into the United States.</p>
+    <h2 class="section-title" data-i18n="faq.title" data-i18n-html="true">Frequently Asked <em>Questions</em></h2>
+    <p class="section-sub" data-i18n="faq.sub">Everything you need to know about expanding your business into the United States.</p>
     <div class="faq-list reveal">
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq.q1">How long does U.S. expansion take?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a" data-i18n="faq.a1">Most of our clients are operationally ready in the U.S. within 60&ndash;90 days. Legal entity formation typically takes 2&ndash;4 weeks. Full market entry — including team, office, and first customers — typically takes 3&ndash;6 months depending on your industry and complexity.</div>
+        <div class="faq-a" data-i18n="faq.a1">Most clients are operational in the U.S. within 60 to 90 days. Forming a legal entity typically takes 2 to 4 weeks depending on structure and state. A full market entry, including setup, compliance, hiring, and first customers, usually takes 3 to 6 months depending on your industry, readiness, and complexity.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq.q2">Do I need to relocate to the U.S.?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a" data-i18n="faq.a2">Not necessarily. Many of our clients successfully operate U.S. entities with a remote or hybrid team. However, for certain visa types and business models, having a U.S.-based founder or executive can significantly accelerate growth.</div>
+        <div class="faq-a" data-i18n="faq.a2">Not necessarily. Many founders successfully build and run U.S. operations remotely or with a hybrid setup. In some cases, particularly for go-to-market execution, enterprise sales, or visa requirements, having a U.S.-based founder or executive can significantly accelerate progress.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq.q3">What industries do you support?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a" data-i18n="faq.a3">We have deep expertise in SaaS, AI/ML, fintech, e-commerce, deep tech, health tech, and consumer brands. Our playbooks are industry-specific. If your industry isn't listed, contact us — we likely have relevant experience.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq.q4">Do you help with fundraising or investors?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a" data-i18n="faq.a4">Yes. We have a curated network of U.S. VCs, angel investors, and family offices. We can make warm introductions and help you prepare your U.S. investor narrative, pitch deck, and cap table structure.</div>
+        <div class="faq-a" data-i18n="faq.a3">We support a wide range of industries. We have direct experience in agriculture, textiles and apparel, furniture and home goods, seafood and aquaculture, processed foods, manufacturing, industrial components, packaging, and consumer goods supply chains.</div>
       </div>
     </div>
   </div>
@@ -1543,9 +1562,9 @@
 <section class="final-cta" id="contact">
   <div class="container">
     <h2 class="cta-headline" data-i18n="cta.headline" data-i18n-html="true">Ready to Enter<br>the U.S. Market?</h2>
-    <p class="cta-sub" data-i18n="cta.sub">Book a free 30-minute strategy call with our team. No obligation. Just clarity on your path to the American market.</p>
+    <p class="cta-sub" data-i18n="cta.sub">Book a free 30-minute strategy call with our team. No obligation. Just clarity on your path to the U.S market.</p>
     <div class="cta-buttons">
-      <a href="mailto:hello@usexpansionadvisory.com" class="btn-white" data-i18n="cta.btn1">Book Your Free Strategy Call &#8594;</a>
+      <a href="https://calendly.com/us-expansion-advisory/30min" target="_blank" rel="noopener" class="btn-white" data-i18n="cta.btn1">Book Your Free Strategy Call &#8594;</a>
     </div>
   </div>
 </section>
@@ -1557,7 +1576,36 @@
       <div>
         <div class="footer-brand-name">US Expansion Advisory</div>
         <p class="footer-tagline" data-i18n="footer.tagline">Helping global companies expand into the United States — from legal setup to first customers and beyond.</p>
-        <a href="mailto:hello@usexpansionadvisory.com" class="footer-contact">hello@usexpansionadvisory.com</a>
+        <div class="footer-addresses">
+          <div class="footer-address-block">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01"/><path d="M13 9h.01"/><path d="M9 13h.01"/><path d="M13 13h.01"/><path d="M9 17h.01"/><path d="M13 17h.01"/></svg>
+            <div class="footer-address-body">
+              <div class="footer-address-label" data-i18n="footer.hq.vn">Vietnam HQ</div>
+              <p class="footer-address">Room 1002, 10F, Citilight Tower<br>45 Võ Thị Sáu, District 1<br>HCMC, Vietnam</p>
+            </div>
+          </div>
+          <div class="footer-address-block">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01"/><path d="M13 9h.01"/><path d="M9 13h.01"/><path d="M13 13h.01"/><path d="M9 17h.01"/><path d="M13 17h.01"/></svg>
+            <div class="footer-address-body">
+              <div class="footer-address-label" data-i18n="footer.hq.us">US HQ</div>
+              <p class="footer-address">16027 Brookhurst Street<br>Fountain Valley, CA 92708, USA</p>
+            </div>
+          </div>
+          <div class="footer-address-block">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div class="footer-address-body">
+              <div class="footer-address-label" data-i18n="footer.hotline">Hotline</div>
+              <p class="footer-address">Vietnam <a href="tel:+84918041099">+84 918 041 099</a><br>USA <a href="tel:+16282927848">+1 (628) 292-7848</a></p>
+            </div>
+          </div>
+          <div class="footer-address-block">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div class="footer-address-body">
+              <div class="footer-address-label" data-i18n="footer.email">Email</div>
+              <p class="footer-address"><a href="mailto:usexpansion.advisory@gmail.com">usexpansion.advisory@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <div class="footer-col-title" data-i18n="footer.services">Services</div>
@@ -1590,9 +1638,8 @@
     <div class="footer-bottom">
       <div class="footer-legal">&copy; 2025 US Expansion Advisory. All rights reserved.</div>
       <div class="social-links">
-        <a href="#" class="social-link" title="LinkedIn">in</a>
-        <a href="#" class="social-link" title="Twitter">X</a>
-        <a href="#" class="social-link" title="Instagram">ig</a>
+        <a href="https://www.linkedin.com/company/us-expansion-advisory/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
+        <a href="https://www.facebook.com/profile.php?id=100085425469724" target="_blank" rel="noopener" class="social-link" title="Facebook">f</a>
       </div>
     </div>
   </div>
@@ -1650,19 +1697,19 @@
       "why.w1.title": "\u0110\u1ed1i t\u00e1c m\u1ed9t c\u1eeda", "why.w1.text": "Ph\u00e1p l\u00fd, di tr\u00fa, b\u1ea5t \u0111\u1ed9ng s\u1ea3n, marketing v\u00e0 t\u0103ng tr\u01b0\u1edfng s\u1ed1 d\u01b0\u1edbi m\u1ed9t m\u00e1i nh\u00e0.",
       "why.w2.title": "M\u1ea1ng l\u01b0\u1edbi chuy\u00ean gia", "why.w2.text": "Lu\u1eadt s\u01b0, nh\u00e0 \u0111\u1ea7u t\u01b0 v\u00e0 chuy\u00ean gia t\u0103ng tr\u01b0\u1edfng \u0111\u00e3 \u0111\u01b0\u1ee3c ki\u1ec3m ch\u1ee9ng.",
       "why.w3.title": "Th\u00e2m nh\u1eadp nhanh h\u01a1n", "why.w3.text": "R\u00fat ng\u1eafn th\u1eddi gian th\u00e2m nh\u1eadp xu\u1ed1ng 60\u201390 ng\u00e0y v\u1edbi quy tr\u00ecnh \u0111\u00e3 ch\u1ee9ng minh.",
-      "why.w4.title": "Kinh nghi\u1ec7m \u0111a ng\u00e0nh", "why.w4.text": "Chuy\u00ean s\u00e2u trong SaaS, AI, fintech, th\u01b0\u01a1ng m\u1ea1i \u0111i\u1ec7n t\u1eed v\u00e0 th\u01b0\u01a1ng hi\u1ec7u ti\u00eau d\u00f9ng.",
+      "why.w4.title": "Kinh nghi\u1ec7m \u0111a ng\u00e0nh", "why.w4.text": "Chuy\u00ean s\u00e2u trong n\u00f4ng nghi\u1ec7p, d\u1ec7t may v\u00e0 may m\u1eb7c, n\u1ed9i th\u1ea5t v\u00e0 h\u00e0ng gia d\u1ee5ng, th\u1ee7y h\u1ea3i s\u1ea3n v\u00e0 nu\u00f4i tr\u1ed3ng th\u1ee7y s\u1ea3n, th\u1ef1c ph\u1ea9m ch\u1ebf bi\u1ebfn, s\u1ea3n xu\u1ea5t, linh ki\u1ec7n c\u00f4ng nghi\u1ec7p, bao b\u00ec v\u00e0 chu\u1ed7i cung \u1ee9ng h\u00e0ng ti\u00eau d\u00f9ng.",
       "team.label": "\u0110\u1ed9i ng\u0169",
       "team.title": "G\u1eb7p g\u1ee1 \u0111\u1ed9i ng\u0169 <em>h\u1ed7 tr\u1ee3 m\u1edf r\u1ed9ng sang Hoa K\u1ef3</em>",
       "team.sub": "\u0110\u1ed9i ng\u0169 \u0111a l\u0129nh v\u1ef1c g\u1ed3m c\u00e1c chuy\u00ean gia ph\u00e1p l\u00fd, \u0111\u1ea7u t\u01b0 v\u00e0 t\u0103ng tr\u01b0\u1edfng.",
-      "team.m1.role": "Gi\u00e1m \u0111\u1ed1c M\u1edf r\u1ed9ng",
+      "team.m1.role": "Gi\u00e1m \u0111\u1ed1c Ph\u00e1p l\u00fd, Lu\u1eadt Kinh doanh Qu\u1ed1c t\u1ebf",
       "team.m1.bio": "Chuy\u00ean gia tu\u00e2n th\u1ee7 quy \u0111\u1ecbnh gi\u00fap doanh nghi\u1ec7p qu\u1ed1c t\u1ebf \u0111\u00e1p \u1ee9ng y\u00eau c\u1ea7u li\u00ean bang v\u00e0 ti\u1ec3u bang Hoa K\u1ef3.",
-      "team.m1.details": "<li>H\u01a1n 10 n\u0103m t\u01b0 v\u1ea5n tu\u00e2n th\u1ee7 quy \u0111\u1ecbnh Hoa K\u1ef3 \u0111a ng\u00e0nh</li><li>C\u1ef1u chuy\u00ean vi\u00ean tu\u00e2n th\u1ee7 t\u1ea1i c\u00f4ng ty Fortune 500</li><li>Chuy\u00ean gia v\u1ec1 khung quy \u0111\u1ecbnh SEC, FDA v\u00e0 FTC</li><li>\u0110\u00e3 h\u1ed7 tr\u1ee3 h\u01a1n 40 c\u00f4ng ty qu\u1ed1c t\u1ebf \u0111\u1ea1t ch\u1ee9ng nh\u1eadn tu\u00e2n th\u1ee7</li><li>Chuy\u00ean v\u1ec1 fintech, health tech v\u00e0 h\u00e0ng ti\u00eau d\u00f9ng</li><li>Song ng\u1eef Anh - Vi\u1ec7t</li><li>Ti\u1ebfn s\u0129 Lu\u1eadt, \u0110\u1ea1i h\u1ecdc Georgetown</li>",
-      "team.m2.role": "Gi\u00e1m \u0111\u1ed1c \u0110\u1ea7u t\u01b0 & B\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+      "team.m1.details": "<li>H\u01a1n 20 n\u0103m kinh nghi\u1ec7m trong l\u0129nh v\u1ef1c lu\u1eadt kinh doanh qu\u1ed1c t\u1ebf</li><li>T\u1eadp trung v\u00e0o c\u01a1 c\u1ea5u doanh nghi\u1ec7p xuy\u00ean bi\u00ean gi\u1edbi v\u00e0 v\u1eadn h\u00e0nh kinh doanh qu\u1ed1c t\u1ebf</li><li class=\"details-heading\">H\u1ecdc v\u1ea5n</li><li>Th\u1ea1c s\u0129 Lu\u1eadt, Kinh t\u1ebf &amp; Qu\u1ea3n l\u00fd, \u0110\u1ea1i h\u1ecdc Ngo\u1ea1i Th\u01b0\u01a1ng (Vi\u1ec7t Nam) v\u00e0 \u0110\u1ea1i h\u1ecdc Nantes (Ph\u00e1p)</li><li>Nghi\u00ean c\u1ee9u sinh Ti\u1ebfn s\u0129, Capitol Technology University (Hoa K\u1ef3)</li>",
+      "team.m2.role": "Gi\u00e1m \u0111\u1ed1c B\u1ea5t \u0111\u1ed9ng s\u1ea3n & \u0110\u1ea7u t\u01b0",
       "team.m2.bio": "H\u1ed7 tr\u1ee3 c\u00e1c c\u00f4ng ty thi\u1ebft l\u1eadp s\u1ef1 hi\u1ec7n di\u1ec7n t\u1ea1i Hoa K\u1ef3 v\u00e0 c\u01a1 c\u1ea5u \u0111\u1ea7u t\u01b0 xuy\u00ean bi\u00ean gi\u1edbi.",
-      "team.m2.details": "<li>C\u01b0 d\u00e2n \u0111\u1ecba ph\u01b0\u01a1ng h\u01a1n 30 n\u0103m</li><li>H\u01a1n 15 n\u0103m kinh nghi\u1ec7m mua b\u00e1n b\u1ea5t \u0111\u1ed9ng s\u1ea3n t\u1ea1i California</li><li>C\u1eed nh\u00e2n - \u0110\u1ea1i h\u1ecdc California</li><li>Chuy\u00ean v\u1ec1 nh\u00e0 \u1edf, c\u0103n h\u1ed9, x\u00e2y d\u1ef1ng m\u1edbi, ng\u01b0\u1eddi mua/b\u00e1n l\u1ea7n \u0111\u1ea7u, b\u1ea5t \u0111\u1ed9ng s\u1ea3n kh\u00f3 kh\u0103n, nh\u00e0 \u0111\u1ea7u t\u01b0 v\u00e0 th\u01b0\u01a1ng m\u1ea1i</li><li>Gi\u1ea3i th\u01b0\u1edfng Top Listing Agent t\u1ea1i Zillow</li><li>M\u00f4i gi\u1edbi B\u1ea5t \u0111\u1ed9ng s\u1ea3n Ch\u00ednh California</li><li>Kinh nghi\u1ec7m d\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng v\u00e0 b\u00e1n h\u00e0ng phong ph\u00fa</li><li>T\u00ecnh nguy\u1ec7n vi\u00ean H\u1ecdc khu Garden Grove v\u00e0 H\u1ed9i Ph\u1ee5 n\u1eef</li><li>Thi\u1ebft k\u1ebf N\u1ed9i th\u1ea5t: Trang tr\u00ed nh\u00e0, B\u1ebfp v\u00e0 V\u0103n ph\u00f2ng</li>",
-      "team.m3.role": "T\u01b0 v\u1ea5n C\u00f4ng ngh\u1ec7 & T\u0103ng tr\u01b0\u1edfng S\u1ed1",
+      "team.m2.details": "<li>H\u01a1n 30 n\u0103m sinh s\u1ed1ng t\u1ea1i California</li><li>H\u01a1n 15 n\u0103m kinh nghi\u1ec7m giao d\u1ecbch b\u1ea5t \u0111\u1ed9ng s\u1ea3n t\u1ea1i California</li><li>M\u00f4i gi\u1edbi B\u1ea5t \u0111\u1ed9ng s\u1ea3n Ch\u00ednh \u0111\u01b0\u1ee3c c\u1ea5p ph\u00e9p t\u1ea1i California</li><li>Chuy\u00ean v\u1ec1 nh\u00e0 \u1edf, c\u0103n h\u1ed9, x\u00e2y d\u1ef1ng m\u1edbi, ng\u01b0\u1eddi mua/b\u00e1n l\u1ea7n \u0111\u1ea7u, b\u1ea5t \u0111\u1ed9ng s\u1ea3n kh\u00f3 kh\u0103n, nh\u00e0 \u0111\u1ea7u t\u01b0 v\u00e0 b\u00e1n h\u00e0ng th\u01b0\u01a1ng m\u1ea1i</li><li>N\u1ec1n t\u1ea3ng thi\u1ebft k\u1ebf n\u1ed9i th\u1ea5t, bao g\u1ed3m trang tr\u00ed nh\u00e0, b\u1ebfp v\u00e0 kh\u00f4ng gian v\u0103n ph\u00f2ng</li><li>Gi\u1ea3i th\u01b0\u1edfng Top Listing Agent tr\u00ean Zillow</li><li>Ho\u1ea1t \u0111\u1ed9ng t\u00ecnh nguy\u1ec7n v\u1edbi H\u1ecdc khu Garden Grove v\u00e0 H\u1ed9i Ph\u1ee5 n\u1eef</li><li class=\"details-heading\">H\u1ecdc v\u1ea5n</li><li>C\u1eed nh\u00e2n, \u0110\u1ea1i h\u1ecdc California</li>",
+      "team.m3.role": "T\u01b0 v\u1ea5n Chi\u1ebfn l\u01b0\u1ee3c Th\u00e2m nh\u1eadp Th\u1ecb tr\u01b0\u1eddng & Chuy\u1ec3n \u0111\u1ed5i S\u1ed1",
       "team.m3.bio": "Th\u1ea1c s\u0129 Kh\u1edfi nghi\u1ec7p & \u0110\u1ed5i m\u1edbi t\u1eeb USC Marshall. H\u01a1n 10 n\u0103m v\u1ec1 Qu\u1ea3n l\u00fd D\u1ef1 \u00e1n, S\u1ea3n ph\u1ea9m v\u00e0 Ph\u00e1t tri\u1ec3n Nh\u00e2n t\u00e0i.",
-      "team.m3.details": "<li>Th\u1ea1c s\u0129 Kh\u1edfi nghi\u1ec7p & \u0110\u1ed5i m\u1edbi @ USC Marshall School of Business</li><li>H\u01a1n 10 n\u0103m kinh nghi\u1ec7m Qu\u1ea3n l\u00fd D\u1ef1 \u00e1n, S\u1ea3n ph\u1ea9m, Ph\u00e1t tri\u1ec3n Nh\u00e2n t\u00e0i cho Startup & Fortune 500</li><li>Hu\u1ea5n luy\u1ec7n vi\u00ean ACSTH 70 gi\u1edd @ Li\u00ean \u0111o\u00e0n Hu\u1ea5n luy\u1ec7n Qu\u1ed1c t\u1ebf</li><li>Certified Product Manager @ The Product School</li><li>Gi\u1ea3i th\u01b0\u1edfng USC Student Empowerment 2024</li><li>H\u1ecdc b\u1ed5ng MSEI</li><li>Gi\u1ea3i Nh\u00ec cu\u1ed9c thi \u0110\u1ea7u t\u01b0 V\u1ed1n M\u1ea1o hi\u1ec3m (VCIC) 2024</li>",
+      "team.m3.details": "<li>H\u01a1n 10 n\u0103m kinh nghi\u1ec7m trong s\u1ea3n ph\u1ea9m, qu\u1ea3n l\u00fd d\u1ef1 \u00e1n v\u00e0 ph\u00e1t tri\u1ec3n nh\u00e2n t\u00e0i t\u1ea1i c\u00e1c startup v\u00e0 c\u00f4ng ty Fortune 500</li><li>Chuy\u00ean s\u00e2u v\u1ec1 chi\u1ebfn l\u01b0\u1ee3c th\u00e2m nh\u1eadp th\u1ecb tr\u01b0\u1eddng, tri\u1ec3n khai v\u00e0 ph\u1ed1i h\u1ee3p li\u00ean ch\u1ee9c n\u0103ng</li><li>Hu\u1ea5n luy\u1ec7n vi\u00ean \u0111\u01b0\u1ee3c ch\u1ee9ng nh\u1eadn (ACSTH 70 gi\u1edd), Li\u00ean \u0111o\u00e0n Hu\u1ea5n luy\u1ec7n Qu\u1ed1c t\u1ebf</li><li>Certified Product Manager, The Product School</li><li class=\"details-heading\">H\u1ecdc v\u1ea5n</li><li>Th\u1ea1c s\u0129 Kh\u1edfi nghi\u1ec7p &amp; \u0110\u1ed5i m\u1edbi, USC Marshall School of Business</li><li>C\u1eed nh\u00e2n Kinh doanh Qu\u1ed1c t\u1ebf, \u0110\u1ea1i h\u1ecdc Ngo\u1ea1i Th\u01b0\u01a1ng</li>",
       "team.m4.role": "Lu\u1eadt s\u01b0",
       "team.m4.bio": "Lu\u1eadt s\u01b0 doanh nghi\u1ec7p v\u00e0 di tr\u00fa Hoa K\u1ef3 h\u1ed7 tr\u1ee3 th\u00e0nh l\u1eadp ph\u00e1p nh\u00e2n v\u00e0 chi\u1ebfn l\u01b0\u1ee3c visa.",
       "team.m4.details": "<li>H\u01a1n 15 n\u0103m h\u00e0nh ngh\u1ec1 lu\u1eadt doanh nghi\u1ec7p v\u00e0 di tr\u00fa Hoa K\u1ef3</li><li>\u0110\u00e3 x\u1eed l\u00fd th\u00e0nh c\u00f4ng h\u01a1n 500 h\u1ed3 s\u01a1 visa (H-1B, L-1, EB-1, O-1)</li><li>C\u1ef1u lu\u1eadt s\u01b0 t\u1ea1i Baker McKenzie</li><li>Chuy\u00ean gia th\u00e0nh l\u1eadp Delaware C-Corp v\u00e0 qu\u1ea3n tr\u1ecb doanh nghi\u1ec7p</li><li>T\u01b0 v\u1ea5n M&A xuy\u00ean bi\u00ean gi\u1edbi, li\u00ean doanh v\u00e0 b\u1ea3o h\u1ed9 s\u1edf h\u1eefu tr\u00ed tu\u1ec7</li><li>\u0110\u01b0\u1ee3c c\u1ea5p ph\u00e9p h\u00e0nh ngh\u1ec1 t\u1ea1i New York, California v\u00e0 Texas</li><li>Ti\u1ebfn s\u0129 Lu\u1eadt t\u1eeb Columbia, LL.M. Lu\u1eadt Kinh doanh Qu\u1ed1c t\u1ebf</li><li>Th\u00f4ng th\u1ea1o Anh, Vi\u1ec7t v\u00e0 Ph\u00e1p</li>",
@@ -1671,13 +1718,11 @@
       "faq.title": "C\u00e2u h\u1ecfi <em>th\u01b0\u1eddng g\u1eb7p</em>",
       "faq.sub": "T\u1ea5t c\u1ea3 nh\u1eefng g\u00ec b\u1ea1n c\u1ea7n bi\u1ebft v\u1ec1 vi\u1ec7c m\u1edf r\u1ed9ng doanh nghi\u1ec7p sang Hoa K\u1ef3.",
       "faq.q1": "M\u1edf r\u1ed9ng sang Hoa K\u1ef3 m\u1ea5t bao l\u00e2u?",
-      "faq.a1": "H\u1ea7u h\u1ebft kh\u00e1ch h\u00e0ng s\u1eb5n s\u00e0ng ho\u1ea1t \u0111\u1ed9ng trong 60\u201390 ng\u00e0y. Th\u00e0nh l\u1eadp ph\u00e1p nh\u00e2n m\u1ea5t 2\u20134 tu\u1ea7n. Th\u00e2m nh\u1eadp \u0111\u1ea7y \u0111\u1ee7 m\u1ea5t 3\u20136 th\u00e1ng.",
+      "faq.a1": "H\u1ea7u h\u1ebft kh\u00e1ch h\u00e0ng \u0111i v\u00e0o v\u1eadn h\u00e0nh t\u1ea1i Hoa K\u1ef3 trong v\u00f2ng 60 \u0111\u1ebfn 90 ng\u00e0y. Th\u00e0nh l\u1eadp ph\u00e1p nh\u00e2n th\u01b0\u1eddng m\u1ea5t 2 \u0111\u1ebfn 4 tu\u1ea7n t\u00f9y c\u01a1 c\u1ea5u v\u00e0 ti\u1ec3u bang. Th\u00e2m nh\u1eadp th\u1ecb tr\u01b0\u1eddng \u0111\u1ea7y \u0111\u1ee7, bao g\u1ed3m thi\u1ebft l\u1eadp, tu\u00e2n th\u1ee7, tuy\u1ec3n d\u1ee5ng v\u00e0 nh\u1eefng kh\u00e1ch h\u00e0ng \u0111\u1ea7u ti\u00ean, th\u01b0\u1eddng m\u1ea5t 3 \u0111\u1ebfn 6 th\u00e1ng t\u00f9y ng\u00e0nh, m\u1ee9c \u0111\u1ed9 s\u1eb5n s\u00e0ng v\u00e0 \u0111\u1ed9 ph\u1ee9c t\u1ea1p c\u1ee7a b\u1ea1n.",
       "faq.q2": "T\u00f4i c\u00f3 c\u1ea7n chuy\u1ec3n \u0111\u1ebfn Hoa K\u1ef3 kh\u00f4ng?",
-      "faq.a2": "Kh\u00f4ng nh\u1ea5t thi\u1ebft. Nhi\u1ec1u kh\u00e1ch h\u00e0ng v\u1eadn h\u00e0nh t\u1eeb xa th\u00e0nh c\u00f4ng. Ch\u00fang t\u00f4i s\u1ebd t\u01b0 v\u1ea5n ph\u01b0\u01a1ng \u00e1n t\u1ed1i \u01b0u.",
+      "faq.a2": "Kh\u00f4ng nh\u1ea5t thi\u1ebft. Nhi\u1ec1u nh\u00e0 s\u00e1ng l\u1eadp x\u00e2y d\u1ef1ng v\u00e0 v\u1eadn h\u00e0nh ho\u1ea1t \u0111\u1ed9ng t\u1ea1i Hoa K\u1ef3 th\u00e0nh c\u00f4ng t\u1eeb xa ho\u1eb7c theo m\u00f4 h\u00ecnh k\u1ebft h\u1ee3p. Trong m\u1ed9t s\u1ed1 tr\u01b0\u1eddng h\u1ee3p, \u0111\u1eb7c bi\u1ec7t l\u00e0 khi tri\u1ec3n khai chi\u1ebfn l\u01b0\u1ee3c th\u00e2m nh\u1eadp th\u1ecb tr\u01b0\u1eddng, b\u00e1n h\u00e0ng doanh nghi\u1ec7p ho\u1eb7c y\u00eau c\u1ea7u visa, vi\u1ec7c c\u00f3 m\u1ed9t nh\u00e0 s\u00e1ng l\u1eadp hay l\u00e3nh \u0111\u1ea1o t\u1ea1i Hoa K\u1ef3 c\u00f3 th\u1ec3 \u0111\u1ea9y nhanh ti\u1ebfn \u0111\u1ed9 \u0111\u00e1ng k\u1ec3.",
       "faq.q3": "C\u00e1c ng\u00e0nh n\u00e0o \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3?",
-      "faq.a3": "SaaS, AI/ML, fintech, th\u01b0\u01a1ng m\u1ea1i \u0111i\u1ec7n t\u1eed, deep tech, health tech v\u00e0 th\u01b0\u01a1ng hi\u1ec7u ti\u00eau d\u00f9ng.",
-      "faq.q4": "B\u1ea1n c\u00f3 h\u1ed7 tr\u1ee3 g\u1ecdi v\u1ed1n kh\u00f4ng?",
-      "faq.a4": "C\u00f3. Ch\u00fang t\u00f4i c\u00f3 m\u1ea1ng l\u01b0\u1edbi VC v\u00e0 nh\u00e0 \u0111\u1ea7u t\u01b0 t\u1ea1i Hoa K\u1ef3. Ch\u00fang t\u00f4i gi\u00fap chu\u1ea9n b\u1ecb pitch deck v\u00e0 c\u1ea5u tr\u00fac c\u1ed5 ph\u1ea7n.",
+      "faq.a3": "Ch\u00fang t\u00f4i h\u1ed7 tr\u1ee3 nhi\u1ec1u ng\u00e0nh kh\u00e1c nhau, v\u1edbi kinh nghi\u1ec7m tr\u1ef1c ti\u1ebfp trong n\u00f4ng nghi\u1ec7p, d\u1ec7t may v\u00e0 may m\u1eb7c, n\u1ed9i th\u1ea5t v\u00e0 h\u00e0ng gia d\u1ee5ng, th\u1ee7y h\u1ea3i s\u1ea3n v\u00e0 nu\u00f4i tr\u1ed3ng th\u1ee7y s\u1ea3n, th\u1ef1c ph\u1ea9m ch\u1ebf bi\u1ebfn, s\u1ea3n xu\u1ea5t, linh ki\u1ec7n c\u00f4ng nghi\u1ec7p, bao b\u00ec v\u00e0 chu\u1ed7i cung \u1ee9ng h\u00e0ng ti\u00eau d\u00f9ng.",
       "cta.headline": "S\u1eb5n s\u00e0ng th\u00e2m nh\u1eadp<br>th\u1ecb tr\u01b0\u1eddng Hoa K\u1ef3?",
       "cta.sub": "\u0110\u1eb7t l\u1ecbch g\u1ecdi t\u01b0 v\u1ea5n 30 ph\u00fat mi\u1ec5n ph\u00ed. Kh\u00f4ng r\u00e0ng bu\u1ed9c.",
       "cta.btn1": "\u0110\u1eb7t l\u1ecbch t\u01b0 v\u1ea5n mi\u1ec5n ph\u00ed \u2192",
@@ -1685,7 +1730,8 @@
       "footer.tagline": "Gi\u00fap c\u00e1c c\u00f4ng ty to\u00e0n c\u1ea7u m\u1edf r\u1ed9ng sang Hoa K\u1ef3.",
       "footer.services": "D\u1ecbch v\u1ee5", "footer.s1": "Ph\u00e1p l\u00fd & Di tr\u00fa", "footer.s2": "B\u1ea5t \u0111\u1ed9ng s\u1ea3n", "footer.s3": "Marketing & T\u0103ng tr\u01b0\u1edfng", "footer.s4": "S\u1ea3n ph\u1ea9m s\u1ed1",
       "footer.company": "C\u00f4ng ty", "footer.c1": "\u0110\u1ed9i ng\u0169", "footer.c2": "\u0110\u00e1nh gi\u00e1", "footer.c3": "Quy tr\u00ecnh", "footer.c4": "H\u1ecfi \u0111\u00e1p",
-      "footer.legal": "Ph\u00e1p l\u00fd", "footer.l1": "Ch\u00ednh s\u00e1ch b\u1ea3o m\u1eadt", "footer.l2": "\u0110i\u1ec1u kho\u1ea3n d\u1ecbch v\u1ee5", "footer.l3": "Ch\u00ednh s\u00e1ch cookie", "footer.l4": "Tuy\u00ean b\u1ed1 mi\u1ec5n tr\u1eeb"
+      "footer.legal": "Ph\u00e1p l\u00fd", "footer.l1": "Ch\u00ednh s\u00e1ch b\u1ea3o m\u1eadt", "footer.l2": "\u0110i\u1ec1u kho\u1ea3n d\u1ecbch v\u1ee5", "footer.l3": "Ch\u00ednh s\u00e1ch cookie", "footer.l4": "Tuy\u00ean b\u1ed1 mi\u1ec5n tr\u1eeb",
+      "footer.hq.vn": "Tr\u1ee5 s\u1edf Vi\u1ec7t Nam", "footer.hq.us": "Tr\u1ee5 s\u1edf Hoa K\u1ef3", "footer.hotline": "Hotline", "footer.email": "Email"
     }
   };
 
@@ -1700,9 +1746,9 @@
       btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
     });
     if (lang === 'vi') {
-      words = ["M\u1edf r\u1ed9ng", "Tuy\u1ec3n d\u1ee5ng", "Tu\u00e2n th\u1ee7", "L\u01b0\u01a1ng", "V\u1eadn h\u00e0nh", "T\u0103ng tr\u01b0\u1edfng"];
+      words = ["Nghi\u00ean c\u1ee9u", "Th\u00e2m nh\u1eadp th\u1ecb tr\u01b0\u1eddng", "Tu\u00e2n th\u1ee7", "M\u1edf r\u1ed9ng", "Ph\u00e2n ph\u1ed1i", "C\u1ea5p ph\u00e9p", "V\u1eadn h\u00e0nh"];
     } else {
-      words = ["Expansion", "Hiring", "Compliance", "Payroll", "Operations", "Growth"];
+      words = ["Research", "Go-to-market", "Compliance", "Expansion", "Distribution", "Licensing", "Operations"];
     }
     currentIndex = 0;
     document.getElementById('wordSlot').textContent = words[0];
@@ -1716,7 +1762,7 @@
   }
 
   // ==================== Rotating words ====================
-  var words = ["Expansion", "Hiring", "Compliance", "Payroll", "Operations", "Growth"];
+  var words = ["Research", "Go-to-market", "Compliance", "Expansion", "Distribution", "Licensing", "Operations"];
   var currentIndex = 0;
   var slot = document.getElementById('wordSlot');
   function rotateWord() {
